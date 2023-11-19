@@ -7,7 +7,7 @@ const app = express();
 const isDev = app.settings.env === "development"; //  The app.settings.env property stores the current environment mode of the Express application which is development or production mode
 const URL = isDev
   ? "http://localhost:3000"
-  : "https://sketchbook-sigma.vercel.app";
+  : "https://sketchbook-one.vercel.app/";
 app.use(cors({ origin: URL }));
 const httpServer = createServer(app);
 const io = new Server(httpServer, { cors: URL });
